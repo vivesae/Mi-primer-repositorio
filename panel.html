@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Panel Deep Focus</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+
+	<style>
+		.margin {
+			margin-left: 3%;
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+	</style>
+
+	<script>
+		datos = {
+			arboles: null,
+			arbustos: null,
+			puntos: null,
+			tiempo_total: null,
+
+		/*	muestra_datos: function(arboles, arbustos, puntos, tiempo_total){
+
+				this.arboles = arboles;
+				this.arbusto = arbustos;
+				this.puntos = puntos;
+				this.tiempo_total = tiempo_total;
+
+				console.log("Tienes "+arboles+" arboles, "+arbustos+" arbustos, has acumulado "+puntos+" puntos y has invertido en este proyecto "+tiempo_total+" minutos");
+			}
+			*/ 
+		};
+
+			//	datos.muestra_datos(5, 30, 70, 200);
+
+
+	</script>
+
+		<script src="contador.js"></script>
+	<!--	<script src="crea_arboles.js"></script> -->
+
+</head>
+<body>
+	<div class="container">
+		<h1>Deep Focus</h1>
+
+		<div class="row margin">
+			<div class="col-md-6"><button id="boton_arbusto" class="btn btn-raised btn-success" onclick="contador.empezar_a_contar(0.1,'arbusto')">ARBUSTO</button></div>
+			<div class="col-md-6"><button id="boton_arbol" class="btn btn-raised btn-success" onclick="contador.empezar_a_contar(0.1, 'arbol')">ÁRBOL</button></div>
+		</div>
+
+			<div><p id="datos"></p></div>
+
+		<div class="row margin">
+			<div id="demo"></div>
+			<div id="demoo"></div>
+			<div><p id="stop"></p></div>
+			<div><p id="contador"></p></div>
+		</div>
+			<div class="margin" id ="bosque"></div>
+		
+		<canvas id="cuadro_bosque" width="900" height="700" style="border:1px solid #d3d3d3"></canvas>
+	</div>
+		
+
+	
+</body>
+</html>
